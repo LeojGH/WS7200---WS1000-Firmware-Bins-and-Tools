@@ -1,0 +1,28 @@
+https://4pda.to/forum/index.php?showtopic=989679&st=12400#entry116779223
+
+
+1. Download "Huawei Multicast Upgrade Tool" - HuaweiMUT.exe
+
+2. Download firmware WS7x00-20_10.0.5.26_main_debug.bin and *.ini file
+
+3. Connect the router to the computer using the "LAN" cable. Turn off "WAN" (Internet), and also turn off the power of the router.
+
+4. Open the "Huawei MUT" application, in the "Netcard" section, select the network card where the router is connected via the "LAN" cable.
+
+5. THE MOST IMPORTANT THING TO DO - IN THE "INTERVAL" SECTION, PUT "2" FOR SUCCESSFUL FIRMWARE! YOU CAN ALSO PUT "5"!
+
+6. In the "Image file" section, click "Open", open the folder with the firmware and select the file WS7x00-20_10.0.5.26_main_debug.bin․ In the upper right corner, put a checkmark on the section so that all 2 checkboxes are on all 2 sections.
+
+7. Press the "AI Life" button (H) on the router and, without releasing, connect the power to the router, after connecting the power, hold the "AI Life" button for EXACTLY 2 SECONDS so that the router switches to firmware mode.
+
+8. In the "Huawei MUT" application, click on "Start" and the firmware process begins. If it gives an error during the firmware process, click on "Start" again, if it gives an error again, perform step 7 again, if it still gives an error, set "Interval" to 5. WHAT THE ROUTER IS RECEIVING FILES, AND IF IT DOES NOT FLASH RED, BUT JUST IS ON RED - THIS MEANS THAT THE PROGRAM IS SENDING FILES TO ANYWHERE.
+
+9. After a successful firmware, the red color on the router will first start flashing a little slowly - THIS MEANS THAT THE FILES ARE WRITTEN, DO NOT POWER OFF! Then the green color will burn - this means 100% success, but that's not all․
+
+10. After the green color is on, turn off the power of the router and turn it on again. The router will not boot up and the orange-red color on the LED of the router will be lit - THIS IS NORMAL. We do not disconnect the router from the computer․
+
+11. Go to the "Control Panel", in the upper right corner of "View" put "Large icons" - click on "Network and Sharing Center" - "Ethernet" - "Properties" - IP version 4 (TCP / IPv4). Click "Use the following IP address" and set "IP address" 192.168.1.5, "Subnet mask" 255.255.255.0, "Default gateway" 192.168.1.1 . Click "OK" and close the windows.
+
+12. Go to the "Control Panel", click on "Programs and Features", look for "Telnet Client" and check the box. Press "OK"․
+
+13. Open the command prompt as administrator, write telnet 192.168.1.1 and press "Enter", then write command:  "diag restore default" and press "Enter" again, wait 5 seconds․ Turn off and turn on the power of the router․

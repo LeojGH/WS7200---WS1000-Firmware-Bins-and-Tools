@@ -1,0 +1,4 @@
+//******conf.dat*****
+//******do not change this file*****
+MULTICAST_IP=224.0.0.119
+INTERVAL_TIME=5ms
