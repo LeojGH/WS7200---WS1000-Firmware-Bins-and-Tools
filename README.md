@@ -1,5 +1,5 @@
 # WS7200---WS1000-Firmware-Bins-and-Tools
-Huawei AX3 Dual/Quad Core
+Huawei AX3 Dual(ws7100)/Quad Core(ws2000)
 
 English:
 Are you looking to update or downgrade the firmware on your Huawei Ax3 dual-core and quad-core router?
