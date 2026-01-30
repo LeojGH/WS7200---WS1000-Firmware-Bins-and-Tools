@@ -1,6 +1,6 @@
 https://4pda.to/forum/index.php?showtopic=989679&st=12400#entry116779223
 
-
+#ENGLISH 
 1. Download "Huawei Multicast Upgrade Tool" - HuaweiMUT.exe
 
 2. Download firmware WS7x00-20_10.0.5.26_main_debug.bin and *.ini file
@@ -25,4 +25,57 @@ https://4pda.to/forum/index.php?showtopic=989679&st=12400#entry116779223
 
 12. Go to the "Control Panel", click on "Programs and Features", look for "Telnet Client" and check the box. Press "OK"․
 
+
 13. Open the command prompt as administrator, write telnet 192.168.1.1 and press "Enter", then write command:  "diag restore default" and press "Enter" again, wait 5 seconds․ Turn off and turn on the power of the router․
+
+#SPANISH
+
+1. Descarga **“Huawei Multicast Upgrade Tool”** – HuaweiMUT.exe.
+
+2. Descarga el firmware **WS7x00-20_10.0.5.26_main_debug.bin** y el archivo ***.ini**.
+
+3. Conecta el router al ordenador usando el cable **LAN**. Desactiva **WAN** (Internet) y también apaga el router (desconecta la alimentación).
+
+4. Abre la aplicación **Huawei MUT** y, en la sección **“Netcard”**, selecciona la tarjeta de red a la que está conectado el router mediante el cable **LAN**.
+
+5. **LO MÁS IMPORTANTE**: en la sección **“INTERVAL”**, pon el valor **“2”** para que el firmware se cargue correctamente. **También puedes poner “5”**.
+
+6. En la sección **“Image file”**, haz clic en **“Open”**, abre la carpeta donde está el firmware y selecciona el archivo **WS7x00-20_10.0.5.26_main_debug.bin**. En la esquina superior derecha, marca las casillas para que **las 2 opciones queden activadas**.
+
+7. Presiona el botón **“AI Life” (H)** del router y, **sin soltarlo**, conecta la alimentación del router. Después de conectar la energía, mantén presionado el botón **AI Life durante EXACTAMENTE 2 SEGUNDOS** para que el router entre en modo de firmware.
+
+8. En la aplicación **Huawei MUT**, haz clic en **“Start”** y comenzará el proceso de firmware.
+
+   * Si aparece un error durante el proceso, vuelve a hacer clic en **“Start”**.
+   * Si vuelve a dar error, repite el **paso 7**.
+   * Si aún da error, cambia **“Interval”** a **5**.
+   * **Si el router está recibiendo archivos y el LED no parpadea en rojo, sino que permanece rojo fijo, significa que el programa está enviando archivos a cualquier parte (no correctamente).**
+
+9. Tras una carga de firmware exitosa, el LED rojo del router empezará a **parpadear lentamente**: **esto significa que los archivos se están escribiendo, NO APAGUES EL ROUTER**. Luego el LED se pondrá **verde**, lo que significa **100% de éxito**, pero aún no termina todo.
+
+10. Cuando el LED esté en verde, apaga el router y vuelve a encenderlo. El router **no arrancará** y el LED se encenderá en **color naranja-rojo**: **ESTO ES NORMAL**. No desconectes el router del ordenador.
+
+11. Ve al **Panel de control**. En la esquina superior derecha, en **“Ver por”**, selecciona **“Iconos grandes”**.
+    Luego entra en **“Centro de redes y recursos compartidos”** → **“Ethernet”** → **“Propiedades”** → **“Protocolo de Internet versión 4 (TCP/IPv4)”**.
+    Marca **“Usar la siguiente dirección IP”** y configura:
+
+    * **Dirección IP**: 192.168.1.5
+    * **Máscara de subred**: 255.255.255.0
+    * **Puerta de enlace predeterminada**: 192.168.1.1
+      Haz clic en **“Aceptar”** y cierra las ventanas.
+
+12. Ve al **Panel de control**, haz clic en **“Programas y características”**, busca **“Cliente Telnet”** y marca la casilla. Pulsa **“Aceptar”**.
+
+13. Abre la **línea de comandos como administrador**, escribe:
+
+    ```
+    telnet 192.168.1.1
+    ```
+
+    y presiona **Enter**. Luego escribe el comando:
+
+    ```
+    diag restore default
+    ```
+
+    Presiona **Enter** nuevamente, espera **5 segundos**, apaga y vuelve a encender el router..
