@@ -1,4 +1,4 @@
-# WS7200---WS1000-Firmware-Bins-and-Tools
+# Huawei AX3 WS7200 WS1000 Firmware-Tools
 Huawei AX3 Dual(ws7100)/Quad Core(ws7200)
 
 English:
